@@ -1993,7 +1993,7 @@ if (args.length < 1 || !isUrl(text) || !xeonaudp3.isYTUrl(text)) throw `Where's 
 const audio=await xeonaudp3.mp3(text)
 await XeonBotInc.sendMessage(m.chat,{
     audio: fs.readFileSync(audio.path),
-    mimetype: 'audio/mp4', ptt: true,
+    mimetype: 'audio/mp4', ptt: false,
     contextInfo:{
         externalAdReply:{
             title:audio.meta.title,
@@ -4657,7 +4657,7 @@ exec(`ffmpeg -i ${media} -filter:a volume=${args[0]} ${rname}`, (err, stderr, st
 fs.unlinkSync(media)
 if (err) return m.reply('Error!')
 jadie = fs.readFileSync(rname)
-XeonBotInc.sendMessage(from, {audio:jadie, mimetype: 'audio/mp4', ptt: true}, {quoted: m})
+XeonBotInc.sendMessage(from, {audio:jadie, mimetype: 'audio/mp4', ptt: false}, {quoted: m})
 fs.unlinkSync(rname)
 })
 } else if (isQuotedVideo) {
@@ -6254,7 +6254,7 @@ if (!text) return m.reply(`Where is the link?`)
         )}\n${themeemoji} *Album:* ${album_name}\n${themeemoji} *Release Date:* ${release_date || ''}`
        const response = await XeonBotInc.sendMessage(m.chat, { image: { url: cover_url }, caption: details }, { quoted: m })
         const bufferpotify = await spotify.download()
-        await XeonBotInc.sendMessage(m.chat, { audio: bufferpotify }, { quoted: response })
+        await XeonBotInc.sendMessage(m.chat, { audio: bufferpotify, mimetype: 'audio/mp4', ptt: false }, { quoted: response })
 break
 case 'reddit': //credit: Ray Senpai ❤️ https://github.com/EternityBots/Nezuko
 if (!text) throw `Where is the subreddit name?`
