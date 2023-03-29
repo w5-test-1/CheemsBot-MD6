@@ -6258,7 +6258,9 @@ if (!text) return m.reply(`Where is the link?`)
        const response = await XeonBotInc.sendMessage(m.chat, { image: { url: cover_url }, caption: details }, { quoted: m })
         const bufferpotify = await spotify.download()
         await XeonBotInc.sendMessage(m.chat, { audio: bufferpotify, mimetype: 'audio/mp4', ptt: false }, { quoted: response })
-	await XeonBotInc.sendMessage(m.chat, { document: bufferpotify, mimetype: 'audio/mpeg', fileName: `${name || ''}.mp3`}, { quoted : m })
+	await XeonBotInc.sendMessage(m.chat, { document: bufferpotify, mimetype: 'audio/mpeg', fileName: `${name || ''}\n|\n${(artists || []).join(
+            ','
+        )}.mp3`}, { quoted : m })
 break
 case 'reddit': //credit: Ray Senpai ❤️ https://github.com/EternityBots/Nezuko
 if (!text) throw `Where is the subreddit name?`
