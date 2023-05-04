@@ -20,7 +20,7 @@
   "author": "DGXeon",
   "license": "AGPL-3",
   "dependencies": {
-    "@adiwajshing/baileys": "github:BOTCAHX/baileys",
+    "@adiwajshing/baileys": "git+https://github.com/lyfe00011/Baileys.git#209dfb122d0cbdba934d45fca47a350169dfe640",
     "@adiwajshing/keyed-db": "^0.2.4",
     "@bochilteam/scraper": "^2.0.0",
     "anime-wallpaper": "^1.0.2",
